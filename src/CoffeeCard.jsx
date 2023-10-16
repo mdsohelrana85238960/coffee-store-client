@@ -16,10 +16,9 @@ const CoffeeCard = ({coffee,coffees,setCoffees}) => {
       cancelButtonColor: '#d33',
       confirmButtonText: 'Yes, delete it!'
     }).then((result) => {
+      
       if (result.isConfirmed) {
-       
-       
-        fetch( `http://localhost:5000/coffee/${_id}`,{
+        fetch( `https://coffee-store-server-fxx5ozo4t-my-team-88e02784.vercel.app/coffee/${_id}`,{
           method:'DELETE',
 
         })
